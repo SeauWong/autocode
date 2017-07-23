@@ -75,11 +75,19 @@ public class FieldUtil {
 		return str;
 	}
 
+	public static String removeFirstUnderLine(String str){
+		if(StringUtils.hasText(str)){
+			str = str.substring(str.indexOf("_")+1);
+		}
+		return str;
+	}
+
 	
 	public static void main(String[] args) {
 		System.out.println(underlineFilter("table_name"));
 		System.out.println(underlineFilter("tableName"));
 		System.out.println(underlineFilter("username"));
+		System.out.println(removeFirstUnderLine("cust_customer"));
 	}
 	
 }

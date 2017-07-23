@@ -33,6 +33,7 @@ public class SQLContext {
 	 */
 	public String getJavaBeanNameLF(){
 		String tableName = tableDefinition.getTableName();
+		tableName = FieldUtil.removeFirstUnderLine(tableName);
 		tableName = FieldUtil.underlineFilter(tableName);
 		tableName = FieldUtil.dotFilter(tableName);
 		return FieldUtil.lowerFirstLetter(tableName);
